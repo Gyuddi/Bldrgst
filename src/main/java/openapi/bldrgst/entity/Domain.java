@@ -2,9 +2,8 @@ package openapi.bldrgst.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-import openapi.bldrgst.repository.ApiRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,6 +12,7 @@ import javax.persistence.Id;
 
 @Entity
 @Builder
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Domain {
@@ -22,6 +22,7 @@ public class Domain {
     @GeneratedValue
     private Long id;
 
+    private String mainPurpsCdNm;
     private String houseName;
     private String buildUse;
     private String buildingStructure;
@@ -30,7 +31,5 @@ public class Domain {
     private String grndFloor;
     private String ugrndFloor;
     private String elevator;
-
-
-
+    private String platPlc;
 }
